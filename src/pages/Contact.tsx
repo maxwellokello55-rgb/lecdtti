@@ -4,11 +4,11 @@ import { MapPin, Phone, Mail, MessageCircle, Clock } from "lucide-react";
 
 const Contact = () => {
   const handleWhatsApp = () => {
-    window.open("https://wa.me/256", "_blank");
+    window.open("https://wa.me/256783254350", "_blank");
   };
 
   const handleEmail = () => {
-    window.location.href = "mailto:info@lecdtti.ac.ug";
+    window.location.href = "mailto:mosesogwang1986@gmail.com";
   };
 
   return (
@@ -55,7 +55,7 @@ const Contact = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground">
-                    +256 XXX XXX XXX
+                    +256 783 254 350
                   </p>
                   <p className="text-sm text-muted-foreground mt-2">
                     Call us during office hours
@@ -72,10 +72,10 @@ const Contact = () => {
                 </CardHeader>
                 <CardContent>
                   <a 
-                    href="mailto:info@lecdtti.ac.ug" 
+                    href="mailto:mosesogwang1986@gmail.com" 
                     className="text-primary hover:underline font-medium"
                   >
-                    info@lecdtti.ac.ug
+                    mosesogwang1986@gmail.com
                   </a>
                   <p className="text-sm text-muted-foreground mt-2">
                     We typically respond within 24 hours

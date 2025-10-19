@@ -46,18 +46,18 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 mr-2 text-secondary" />
-                <span className="text-white/80">+256 XXX XXX XXX</span>
+                <span className="text-white/80">+256 783 254 350</span>
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 mr-2 text-secondary" />
-                <a href="mailto:info@lecdtti.ac.ug" className="text-white/80 hover:text-white transition-colors">
-                  info@lecdtti.ac.ug
+                <a href="mailto:mosesogwang1986@gmail.com" className="text-white/80 hover:text-white transition-colors">
+                  mosesogwang1986@gmail.com
                 </a>
               </li>
               <li className="flex items-center">
                 <MessageCircle className="h-5 w-5 mr-2 text-secondary" />
                 <a 
-                  href="https://wa.me/256" 
+                  href="https://wa.me/256783254350" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-white/80 hover:text-white transition-colors"
