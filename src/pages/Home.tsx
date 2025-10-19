@@ -1,12 +1,34 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { GraduationCap, Users, Award, BookOpen, MessageCircle } from "lucide-react";
+import { GraduationCap, Users, Award, BookOpen, MessageCircle, ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import heroImage from "@/assets/hero-education.jpg";
+import { useState } from "react";
+import administrationBlock from "@/assets/administration-block.jpg";
+import studentsReady from "@/assets/students-ready.jpg";
+import morningBriefing from "@/assets/morning-briefing.jpg";
+import studentsAssembly from "@/assets/students-assembly.jpg";
+import studentsExams from "@/assets/students-exams.jpg";
 
 const Home = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  
+  const slides = [
+    { image: studentsReady, caption: "Students ready for school practice" },
+    { image: studentsAssembly, caption: "Students at morning assembly" },
+    { image: studentsExams, caption: "Students during examinations" },
+    { image: morningBriefing, caption: "Staff morning briefing" },
+  ];
+
   const handleWhatsApp = () => {
-    window.open("https://wa.me/256", "_blank");
+    window.open("https://wa.me/256783254350", "_blank");
+  };
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
 
   return (
@@ -16,7 +38,7 @@ const Home = () => {
         {/* Background Image with Overlay */}
         <div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroImage})` }}
+          style={{ backgroundImage: `url(${administrationBlock})` }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/90 to-primary/80"></div>
         </div>
@@ -92,21 +114,70 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Welcome Section */}
+      {/* Photo Gallery Carousel */}
       <section className="py-20 px-6 bg-muted/30">
-        <div className="container mx-auto max-w-4xl text-center space-y-6">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-            Welcome to LECDTTI
-          </h2>
-          <p className="text-lg text-muted-foreground leading-relaxed">
-            The Lira Early Childhood Development Teachers' Training Institute is a leading private institution 
-            dedicated to training compassionate and skilled early childhood educators. Since 2019, we have grown 
-            from 14 students to over 250, with a remarkable 95% female enrollment rate.
-          </p>
-          <p className="text-lg text-muted-foreground leading-relaxed">
-            Affiliated with Kyambogo University, we offer comprehensive programs that combine theoretical knowledge 
-            with practical skills, ensuring our graduates are ready to make a real difference in the lives of young children.
-          </p>
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Life at LECDTTI</h2>
+          
+          <div className="relative">
+            {/* Main Image */}
+            <div className="relative h-[400px] md:h-[500px] rounded-lg overflow-hidden shadow-medium">
+              <img 
+                src={slides[currentSlide].image} 
+                alt={slides[currentSlide].caption}
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6">
+                <p className="text-white text-lg font-medium">{slides[currentSlide].caption}</p>
+              </div>
+            </div>
+
+            {/* Navigation Buttons */}
+            <button
+              onClick={prevSlide}
+              className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white p-3 rounded-full shadow-soft transition-all"
+              aria-label="Previous slide"
+            >
+              <ChevronLeft className="h-6 w-6 text-primary" />
+            </button>
+            <button
+              onClick={nextSlide}
+              className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white p-3 rounded-full shadow-soft transition-all"
+              aria-label="Next slide"
+            >
+              <ChevronRight className="h-6 w-6 text-primary" />
+            </button>
+
+            {/* Dots Indicator */}
+            <div className="flex justify-center mt-6 gap-2">
+              {slides.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentSlide(index)}
+                  className={`w-3 h-3 rounded-full transition-all ${
+                    currentSlide === index ? "bg-primary w-8" : "bg-muted-foreground/30"
+                  }`}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
+            </div>
+          </div>
+
+          {/* Welcome Text */}
+          <div className="mt-16 text-center space-y-6">
+            <h3 className="text-2xl md:text-3xl font-bold text-foreground">
+              Welcome to LECDTTI
+            </h3>
+            <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+              The Lira Early Childhood Development Teachers' Training Institute is a leading private institution 
+              dedicated to training compassionate and skilled early childhood educators. Since 2019, we have grown 
+              from 14 students to over 250, with a remarkable 95% female enrollment rate.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+              Affiliated with Kyambogo University, we offer comprehensive programs that combine theoretical knowledge 
+              with practical skills, ensuring our graduates are ready to make a real difference in the lives of young children.
+            </p>
+          </div>
         </div>
       </section>
 

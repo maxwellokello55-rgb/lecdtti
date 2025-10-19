@@ -1,5 +1,12 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Camera, Video, Upload } from "lucide-react";
+import { Camera, Video } from "lucide-react";
+import studentsReady from "@/assets/students-ready.jpg";
+import morningBriefing from "@/assets/morning-briefing.jpg";
+import principalOffice from "@/assets/principal-office.jpg";
+import staffPhoto from "@/assets/staff-photo.jpg";
+import studentsAssembly from "@/assets/students-assembly.jpg";
+import studentsExams from "@/assets/students-exams.jpg";
+import administrationBlock from "@/assets/administration-block.jpg";
 
 const Gallery = () => {
   return (
@@ -17,62 +24,78 @@ const Gallery = () => {
       {/* Gallery Content */}
       <section className="py-16 px-6 bg-background">
         <div className="container mx-auto max-w-6xl">
-          {/* Placeholder for Photos */}
+          {/* Photo Gallery */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold mb-8 flex items-center justify-center">
               <Camera className="mr-3 h-8 w-8 text-primary" />
               Photo Gallery
             </h2>
             
-            <Card className="shadow-soft border-2 border-dashed">
-              <CardContent className="py-20 text-center">
-                <Upload className="h-16 w-16 mx-auto mb-6 text-muted-foreground" />
-                <h3 className="text-xl font-semibold mb-3">Photo Gallery Coming Soon</h3>
-                <p className="text-muted-foreground max-w-2xl mx-auto mb-6">
-                  We're building an inspiring collection of photos showcasing our campus, classrooms, students, 
-                  teaching activities, and community events. Check back soon to see LECDTTI in action!
-                </p>
-                <div className="text-sm text-muted-foreground bg-muted/30 p-4 rounded-lg max-w-xl mx-auto">
-                  <p className="font-semibold mb-2">What you'll see here:</p>
-                  <ul className="space-y-1 text-left">
-                    <li>• Classroom learning and practical sessions</li>
-                    <li>• Student activities and achievements</li>
-                    <li>• Campus facilities and infrastructure</li>
-                    <li>• Graduation ceremonies and special events</li>
-                    <li>• Community engagement and partnerships</li>
-                  </ul>
-                </div>
-              </CardContent>
-            </Card>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                { image: studentsReady, caption: "Students ready for school practice" },
+                { image: studentsAssembly, caption: "Students at morning assembly" },
+                { image: studentsExams, caption: "Students during examinations" },
+                { image: morningBriefing, caption: "Staff morning briefing" },
+                { image: staffPhoto, caption: "LECDTTI Staff Team" },
+                { image: principalOffice, caption: "Principal in the office" },
+                { image: administrationBlock, caption: "Administration Block" },
+              ].map((item, index) => (
+                <Card key={index} className="overflow-hidden shadow-soft hover:shadow-medium transition-all group">
+                  <div className="relative h-64 overflow-hidden">
+                    <img 
+                      src={item.image} 
+                      alt={item.caption}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                      <div className="absolute bottom-0 left-0 right-0 p-4">
+                        <p className="text-white font-medium">{item.caption}</p>
+                      </div>
+                    </div>
+                  </div>
+                </Card>
+              ))}
+            </div>
           </div>
 
-          {/* Placeholder for Videos */}
+          {/* Video Gallery */}
           <div>
             <h2 className="text-3xl font-bold mb-8 flex items-center justify-center">
               <Video className="mr-3 h-8 w-8 text-secondary" />
               Video Gallery
             </h2>
             
-            <Card className="shadow-soft border-2 border-dashed">
-              <CardContent className="py-20 text-center">
-                <Upload className="h-16 w-16 mx-auto mb-6 text-muted-foreground" />
-                <h3 className="text-xl font-semibold mb-3">Video Gallery Coming Soon</h3>
-                <p className="text-muted-foreground max-w-2xl mx-auto mb-6">
-                  Experience LECDTTI through dynamic video content featuring teaching demonstrations, student testimonials, 
-                  campus tours, and special moments from our community.
-                </p>
-                <div className="text-sm text-muted-foreground bg-muted/30 p-4 rounded-lg max-w-xl mx-auto">
-                  <p className="font-semibold mb-2">What you'll see here:</p>
-                  <ul className="space-y-1 text-left">
-                    <li>• Virtual campus tours</li>
-                    <li>• Teaching demonstrations and methodology</li>
-                    <li>• Student and alumni testimonials</li>
-                    <li>• Special events and celebrations</li>
-                    <li>• Messages from leadership and staff</li>
-                  </ul>
-                </div>
-              </CardContent>
-            </Card>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <Card className="overflow-hidden shadow-soft">
+                <CardContent className="p-0">
+                  <video 
+                    controls 
+                    className="w-full h-auto"
+                    poster={studentsAssembly}
+                  >
+                    <source src="/videos/students-morning-circle.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                  <div className="p-4">
+                    <h3 className="font-semibold text-lg mb-2">Students Morning Circle</h3>
+                    <p className="text-muted-foreground text-sm">
+                      Daily morning activities at LECDTTI
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="shadow-soft border-2 border-dashed flex items-center justify-center min-h-[300px]">
+                <CardContent className="text-center py-12">
+                  <Video className="h-12 w-12 mx-auto mb-4 text-muted-foreground" />
+                  <h3 className="text-lg font-semibold mb-2">More Videos Coming Soon</h3>
+                  <p className="text-muted-foreground text-sm max-w-md">
+                    We're adding more video content including campus tours, teaching demonstrations, and student testimonials.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
           </div>
 
           {/* Info Section */}

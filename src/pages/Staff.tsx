@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Users, UserCheck, GraduationCap } from "lucide-react";
+import staffPhoto from "@/assets/staff-photo.jpg";
 
 const Staff = () => {
   const boardMembers = [
@@ -64,6 +65,22 @@ const Staff = () => {
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Staff & Management</h1>
           <p className="text-xl text-white/90">
             Dedicated professionals leading LECDTTI to excellence
+          </p>
+        </div>
+      </section>
+
+      {/* Staff Photo Section */}
+      <section className="py-12 px-6 bg-muted/30">
+        <div className="container mx-auto max-w-5xl">
+          <div className="rounded-lg overflow-hidden shadow-medium">
+            <img 
+              src={staffPhoto} 
+              alt="LECDTTI Staff Team" 
+              className="w-full h-auto object-cover"
+            />
+          </div>
+          <p className="text-center text-muted-foreground mt-4 italic">
+            Our dedicated team of educators and administrators at LECDTTI
           </p>
         </div>
       </section>
