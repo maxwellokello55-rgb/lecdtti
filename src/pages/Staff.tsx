@@ -16,7 +16,7 @@ const Staff = () => {
     },
     {
       role: "Member, Board of Directors",
-      name: "Okello Julius",
+      name: "Okello Geoffrey",
       expertise: "Strategic planning and community engagement"
     }
   ];
