@@ -84,7 +84,7 @@ const Home = () => {
         {/* Content */}
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="text-center text-white space-y-6 animate-fade-in">
-            <h1 className="text-4xl md:text-6xl font-bold leading-tight text-primary">
+            <h1 className="text-4xl md:text-6xl font-bold leading-tight">
               Welcome to Lira Early Childhood Development<br />Teachers' Training Institute
             </h1>
             <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto">
