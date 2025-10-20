@@ -6,17 +6,17 @@ const Staff = () => {
   const boardMembers = [
     {
       role: "Chairperson, Board of Directors",
-      name: "Ochen Richard",
+      name: "Okello Geoffrey",
       expertise: "Education leadership and institutional governance"
     },
     {
       role: "Secretary, Board of Directors",
-      name: "Okeny Robert",
+      name: "Orac Joe Jaspher",
       expertise: "Administrative management and policy development"
     },
     {
       role: "Member, Board of Directors",
-      name: "Okello Geoffrey",
+      name: "Angole Godfrey",
       expertise: "Strategic planning and community engagement"
     }
   ];
