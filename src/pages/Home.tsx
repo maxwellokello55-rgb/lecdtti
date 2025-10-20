@@ -198,10 +198,10 @@ const Home = () => {
             </div>
           </div>
 
-          {/* Welcome Text */}
+          {/* About Section */}
           <div className="mt-16 text-center space-y-6">
             <h3 className="text-2xl md:text-3xl font-bold text-foreground">
-              Welcome to LECDTTI
+              About Our Institute
             </h3>
             <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
               The Lira Early Childhood Development Teachers' Training Institute is a leading private institution 
