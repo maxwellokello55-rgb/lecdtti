@@ -4,6 +4,11 @@ import { GraduationCap, Users, Award, BookOpen, MessageCircle, ChevronLeft, Chev
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import administrationBlock from "@/assets/administration-block.jpg";
+import administrationBlock1 from "@/assets/administration-block-1.jpg";
+import administrationBlock3 from "@/assets/administration-block-3.jpg";
+import ictRoom from "@/assets/ict-room.jpg";
+import principalOffice2 from "@/assets/principal-office-2.jpg";
+import studentsSittingExams from "@/assets/students-sitting-exams.jpg";
 import studentsReady from "@/assets/students-ready.jpg";
 import morningBriefing from "@/assets/morning-briefing.jpg";
 import studentsAssembly from "@/assets/students-assembly.jpg";
@@ -11,12 +16,22 @@ import studentsExams from "@/assets/students-exams.jpg";
 
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentHeroSlide, setCurrentHeroSlide] = useState(0);
   
   const slides = [
     { image: studentsReady, caption: "Students ready for school practice" },
     { image: studentsAssembly, caption: "Students at morning assembly" },
     { image: studentsExams, caption: "Students during examinations" },
     { image: morningBriefing, caption: "Staff morning briefing" },
+  ];
+
+  const heroBackgrounds = [
+    administrationBlock,
+    administrationBlock1,
+    administrationBlock3,
+    ictRoom,
+    principalOffice2,
+    studentsSittingExams,
   ];
 
   const handleWhatsApp = () => {
@@ -39,16 +54,31 @@ const Home = () => {
     return () => clearInterval(interval);
   }, [slides.length]);
 
+  useEffect(() => {
+    const heroInterval = setInterval(() => {
+      setCurrentHeroSlide((prev) => (prev + 1) % heroBackgrounds.length);
+    }, 5000);
+
+    return () => clearInterval(heroInterval);
+  }, [heroBackgrounds.length]);
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative py-20 md:py-32 px-6 overflow-hidden">
         {/* Background Image with Overlay */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${administrationBlock})` }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/40 via-primary/30 to-primary/20"></div>
+        <div className="absolute inset-0">
+          {heroBackgrounds.map((bg, index) => (
+            <div
+              key={index}
+              className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${
+                currentHeroSlide === index ? "opacity-100" : "opacity-0"
+              }`}
+              style={{ backgroundImage: `url(${bg})` }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/40 via-primary/30 to-primary/20"></div>
+            </div>
+          ))}
         </div>
 
         {/* Content */}
