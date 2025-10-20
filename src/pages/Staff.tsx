@@ -24,7 +24,7 @@ const Staff = () => {
   const management = [
     {
       role: "Principal",
-      name: "Achola Florence",
+      name: "Ogwang Moses",
       responsibilities: [
         "Overall academic and administrative leadership",
         "Curriculum development and quality assurance",
