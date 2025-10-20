@@ -1,8 +1,30 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Users, UserCheck, GraduationCap } from "lucide-react";
 import staffPhoto from "@/assets/staff-photo.jpg";
+import { useState, useEffect } from "react";
+import administrationBlock2 from "@/assets/administration-block-2.jpg";
+import administrationBlock4 from "@/assets/administration-block-4.jpg";
+import studentsReady2 from "@/assets/students-ready-2.jpg";
+import staffPhoto2 from "@/assets/staff-photo-2.jpg";
+import studentsAssembly2 from "@/assets/students-assembly-2.jpg";
 
 const Staff = () => {
+  const [currentBg, setCurrentBg] = useState(0);
+  
+  const backgrounds = [
+    administrationBlock2,
+    administrationBlock4,
+    studentsReady2,
+    staffPhoto2,
+    studentsAssembly2
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentBg((prev) => (prev + 1) % backgrounds.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [backgrounds.length]);
   const boardMembers = [
     {
       role: "Chairperson, Board of Directors",
@@ -60,9 +82,25 @@ const Staff = () => {
   return (
     <div className="min-h-screen">
       {/* Header */}
-      <section className="bg-gradient-to-r from-primary to-primary-glow text-white py-16 px-6">
-        <div className="container mx-auto max-w-4xl text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Staff & Management</h1>
+      <section className="relative py-16 px-6 overflow-hidden">
+        {/* Background Images */}
+        <div className="absolute inset-0">
+          {backgrounds.map((bg, index) => (
+            <div
+              key={index}
+              className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${
+                currentBg === index ? "opacity-100" : "opacity-0"
+              }`}
+              style={{ backgroundImage: `url(${bg})` }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/40 via-primary/30 to-primary/20"></div>
+            </div>
+          ))}
+        </div>
+
+        {/* Content */}
+        <div className="container mx-auto max-w-4xl text-center relative z-10">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">Staff & Management</h1>
           <p className="text-xl text-white/90">
             Dedicated professionals leading LECDTTI to excellence
           </p>
