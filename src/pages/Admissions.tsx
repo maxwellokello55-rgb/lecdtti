@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import administrationBlock2 from "@/assets/administration-block-2.jpg";
 import administrationBlock4 from "@/assets/administration-block-4.jpg";
-import studentsReady2 from "@/assets/students-ready-2.jpg";
+import studentsReady2 from "@/assets/students-ready.jpg";
 import staffPhoto2 from "@/assets/staff-photo-2.jpg";
 import studentsAssembly2 from "@/assets/students-assembly-2.jpg";
 
