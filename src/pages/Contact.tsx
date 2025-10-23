@@ -2,21 +2,23 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Mail, MessageCircle, Clock } from "lucide-react";
 import { useState, useEffect } from "react";
-import administrationBlock2 from "@/assets/administration-block-2.jpg";
-import administrationBlock4 from "@/assets/administration-block-4.jpg";
-import studentsReady2 from "@/assets/students-ready.jpg";
-import staffPhoto2 from "@/assets/staff-photo-2.jpg";
-import studentsAssembly2 from "@/assets/students-assembly-2.jpg";
+import administrationBlockFront from "@/assets/administration-block-front.jpg";
+import administrationBlockGarden from "@/assets/administration-block-garden.jpg";
+import studentsAssembly3 from "@/assets/students-assembly-3.jpg";
+import studentsExamHall from "@/assets/students-exam-hall.jpg";
+import staffTeamPhoto from "@/assets/staff-team-photo.jpg";
+import studentsReady from "@/assets/students-ready.jpg";
 
 const Contact = () => {
   const [currentBg, setCurrentBg] = useState(0);
   
   const backgrounds = [
-    administrationBlock2,
-    administrationBlock4,
-    studentsReady2,
-    staffPhoto2,
-    studentsAssembly2
+    administrationBlockFront,
+    administrationBlockGarden,
+    studentsAssembly3,
+    studentsExamHall,
+    staffTeamPhoto,
+    studentsReady
   ];
 
   useEffect(() => {

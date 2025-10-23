@@ -1,6 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Camera, Video } from "lucide-react";
-import studentsReady from "@/assets/students-ready.jpg";
 import morningBriefing from "@/assets/morning-briefing.jpg";
 import principalOffice from "@/assets/principal-office.jpg";
 import staffPhoto from "@/assets/staff-photo.jpg";
@@ -8,20 +7,23 @@ import studentsAssembly from "@/assets/students-assembly.jpg";
 import studentsExams from "@/assets/students-exams.jpg";
 import administrationBlock from "@/assets/administration-block.jpg";
 import { useState, useEffect } from "react";
-import administrationBlock2 from "@/assets/administration-block-2.jpg";
-import administrationBlock4 from "@/assets/administration-block-4.jpg";
-import staffPhoto2 from "@/assets/staff-photo-2.jpg";
-import studentsAssembly2 from "@/assets/students-assembly-2.jpg";
+import administrationBlockFront from "@/assets/administration-block-front.jpg";
+import administrationBlockGarden from "@/assets/administration-block-garden.jpg";
+import studentsAssembly3 from "@/assets/students-assembly-3.jpg";
+import studentsExamHall from "@/assets/students-exam-hall.jpg";
+import staffTeamPhoto from "@/assets/staff-team-photo.jpg";
+import studentsReady from "@/assets/students-ready.jpg";
 
 const Gallery = () => {
   const [currentBg, setCurrentBg] = useState(0);
   
   const backgrounds = [
-    administrationBlock2,
-    administrationBlock4,
-    studentsReady,
-    staffPhoto2,
-    studentsAssembly2
+    administrationBlockFront,
+    administrationBlockGarden,
+    studentsAssembly3,
+    studentsExamHall,
+    staffTeamPhoto,
+    studentsReady
   ];
 
   useEffect(() => {
