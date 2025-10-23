@@ -198,44 +198,87 @@ const Home = () => {
             </div>
           </div>
 
-          {/* About Section */}
+          {/* Why Choose Us Section */}
           <div className="mt-16 text-center space-y-6">
             <h3 className="text-2xl md:text-3xl font-bold text-foreground">
-              About Our Institute
+              Why Choose LECDTTI?
             </h3>
             <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-              The Lira Early Childhood Development Teachers' Training Institute is a leading private institution 
-              dedicated to training compassionate and skilled early childhood educators. Since 2019, we have grown 
-              from 14 students to over 250, with a remarkable 95% female enrollment rate.
+              We are transforming early childhood education in Northern Uganda through excellence, accessibility, 
+              and a commitment to empowering women educators. With 95% female enrollment and a strong focus on 
+              practical skills, we prepare compassionate teachers who make a lasting impact.
             </p>
-            <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-              Affiliated with Kyambogo University, we offer comprehensive programs that combine theoretical knowledge 
-              with practical skills, ensuring our graduates are ready to make a real difference in the lives of young children.
+            <p className="text-xl font-semibold text-primary italic max-w-2xl mx-auto">
+              Our Motto: Ethics and Integrity
             </p>
           </div>
         </div>
       </section>
 
-      {/* Core Values Section */}
+      {/* Programs Overview Section */}
       <section className="py-20 px-6 bg-background">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Our Core Values</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Our Training Programs</h2>
+          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+            Comprehensive programs designed for both pre-service and in-service early childhood educators
+          </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { title: "Inclusion", description: "Creating opportunities for all aspiring educators" },
-              { title: "Child-Centeredness", description: "Focusing on the holistic development of young learners" },
-              { title: "Professionalism", description: "Upholding the highest standards in teacher training" },
-              { title: "Gender Equity", description: "Empowering women in education leadership" },
-              { title: "Community Partnership", description: "Working together for better education outcomes" },
-              { title: "Continuous Improvement", description: "Always striving for excellence in training" }
-            ].map((value, index) => (
-              <Card key={index} className="shadow-soft hover:shadow-medium transition-all">
-                <CardContent className="pt-6">
-                  <h3 className="text-xl font-semibold text-primary mb-3">{value.title}</h3>
-                  <p className="text-muted-foreground">{value.description}</p>
-                </CardContent>
-              </Card>
-            ))}
+            <Card className="shadow-soft hover:shadow-medium transition-all border-t-4 border-t-primary">
+              <CardContent className="pt-8">
+                <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full">
+                  <GraduationCap className="h-8 w-8 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold text-center text-primary mb-3">Diploma in ECD</h3>
+                <p className="text-muted-foreground text-center mb-4">
+                  A comprehensive two-year professional qualification preparing you for a career as a skilled educator
+                </p>
+                <div className="text-center">
+                  <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-sm font-medium rounded-full">
+                    2 Years
+                  </span>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="shadow-soft hover:shadow-medium transition-all border-t-4 border-t-secondary">
+              <CardContent className="pt-8">
+                <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 bg-secondary/10 rounded-full">
+                  <BookOpen className="h-8 w-8 text-secondary" />
+                </div>
+                <h3 className="text-xl font-semibold text-center text-secondary mb-3">Certificate in ECD</h3>
+                <p className="text-muted-foreground text-center mb-4">
+                  A foundational two-year program providing essential knowledge and practical skills for entering the field
+                </p>
+                <div className="text-center">
+                  <span className="inline-block px-3 py-1 bg-secondary/10 text-secondary text-sm font-medium rounded-full">
+                    2 Years
+                  </span>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="shadow-soft hover:shadow-medium transition-all border-t-4 border-t-accent">
+              <CardContent className="pt-8">
+                <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 bg-accent/10 rounded-full">
+                  <Users className="h-8 w-8 text-accent" />
+                </div>
+                <h3 className="text-xl font-semibold text-center text-accent mb-3">Child Care Program</h3>
+                <p className="text-muted-foreground text-center mb-4">
+                  A focused one-year program on operational and practical aspects of running a nursery or child care facility
+                </p>
+                <div className="text-center">
+                  <span className="inline-block px-3 py-1 bg-accent/10 text-accent text-sm font-medium rounded-full">
+                    1 Year
+                  </span>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="text-center mt-12">
+            <Button size="lg" asChild>
+              <Link to="/programs">Learn More About Our Programs</Link>
+            </Button>
           </div>
         </div>
       </section>
