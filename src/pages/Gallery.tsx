@@ -126,13 +126,22 @@ const Gallery = () => {
                 </CardContent>
               </Card>
 
-              <Card className="shadow-soft border-2 border-dashed flex items-center justify-center min-h-[300px]">
-                <CardContent className="text-center py-12">
-                  <Video className="h-12 w-12 mx-auto mb-4 text-muted-foreground" />
-                  <h3 className="text-lg font-semibold mb-2">More Videos Coming Soon</h3>
-                  <p className="text-muted-foreground text-sm max-w-md">
-                    We're adding more video content including campus tours, teaching demonstrations, and student testimonials.
-                  </p>
+              <Card className="overflow-hidden shadow-soft">
+                <CardContent className="p-0">
+                  <video 
+                    controls 
+                    className="w-full h-auto"
+                    poster={morningBriefing}
+                  >
+                    <source src="/videos/tutor-demonstration-lesson.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                  <div className="p-4">
+                    <h3 className="font-semibold text-lg mb-2">Tutor Demonstration Lesson</h3>
+                    <p className="text-muted-foreground text-sm">
+                      A tutor conducting a demonstration lesson for students at LECDTTI
+                    </p>
+                  </div>
                 </CardContent>
               </Card>
             </div>
