@@ -230,16 +230,21 @@ const Contact = () => {
               <CardTitle className="text-2xl">Find Us on the Map</CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="aspect-video bg-muted/30 rounded-lg flex items-center justify-center">
-                <div className="text-center text-muted-foreground">
-                  <MapPin className="h-12 w-12 mx-auto mb-4" />
-                  <p className="font-semibold">Google Map Coming Soon</p>
-                  <p className="text-sm mt-2">Interactive map will be embedded here</p>
-                  <p className="text-xs mt-4 max-w-md">
-                    Location: Kichope Cell, Lira City West Division, Lira City, Northern Uganda
-                  </p>
-                </div>
+              <div className="aspect-video bg-muted/30 rounded-lg overflow-hidden">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.3!2d32.9!3d2.24!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sLira%20City!5e0!3m2!1sen!2sug!4v1234567890"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="LECDTTI Location - Kichope Cell, Lira City West Division, Lira City, Northern Uganda"
+                ></iframe>
               </div>
+              <p className="text-xs text-muted-foreground mt-4 text-center">
+                📍 Kichope Cell, Lira City West Division, Lira City, Northern Uganda
+              </p>
             </CardContent>
           </Card>
         </div>
