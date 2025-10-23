@@ -76,7 +76,7 @@ const Contact = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground leading-relaxed">
-                    Kichope A<br />
+                    Kichope Cell<br />
                     Lira City West Division<br />
                     Lira City<br />
                     Northern Uganda
@@ -234,7 +234,7 @@ const Contact = () => {
                   <p className="font-semibold">Google Map Coming Soon</p>
                   <p className="text-sm mt-2">Interactive map will be embedded here</p>
                   <p className="text-xs mt-4 max-w-md">
-                    Location: Kichope A, Lira City West Division, Lira City, Northern Uganda
+                    Location: Kichope Cell, Lira City West Division, Lira City, Northern Uganda
                   </p>
                 </div>
               </div>

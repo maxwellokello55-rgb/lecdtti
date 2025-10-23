@@ -67,7 +67,7 @@ const About = () => {
                 250 students, of which 95% are women.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Currently operating from Kichope A, Lira City West Division, Lira City, Northern Uganda, 
+                Currently operating from Kichope Cell, Lira City West Division, Lira City, Northern Uganda, 
                 LECDTTI has grown its staff-to-student ratio from 5:14 to 9:250, demonstrating our commitment 
                 to sustainable growth and quality education.
               </p>
