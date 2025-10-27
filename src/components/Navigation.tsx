@@ -15,6 +15,7 @@ const Navigation = () => {
     { to: "/campus-development", label: "Campus Development" },
     { to: "/staff", label: "Staff & Management" },
     { to: "/gallery", label: "Gallery" },
+    { to: "/news-events", label: "News & Events" },
     { to: "/contact", label: "Contact" },
   ];
 
