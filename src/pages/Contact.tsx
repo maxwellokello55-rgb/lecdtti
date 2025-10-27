@@ -32,7 +32,7 @@ const Contact = () => {
   };
 
   const handleEmail = () => {
-    window.location.href = "mailto:mosesogwang1986@gmail.com";
+    window.location.href = "mailto:info@lecdtti.org";
   };
 
   return (
@@ -112,10 +112,10 @@ const Contact = () => {
                 </CardHeader>
                 <CardContent>
                   <a 
-                    href="mailto:mosesogwang1986@gmail.com" 
+                    href="mailto:info@lecdtti.org" 
                     className="text-primary hover:underline font-medium"
                   >
-                    mosesogwang1986@gmail.com
+                    info@lecdtti.org
                   </a>
                   <p className="text-sm text-muted-foreground mt-2">
                     We typically respond within 24 hours
