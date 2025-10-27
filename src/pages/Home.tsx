@@ -90,7 +90,7 @@ const Home = () => {
             <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto">
               Empowering educators to nurture the next generation through professional training in Early Childhood Development
             </p>
-            <div className="flex flex-wrap gap-4 justify-center pt-6">
+          <div className="flex flex-wrap gap-4 justify-center pt-6">
               <Button 
                 size="lg" 
                 variant="secondary"
@@ -107,6 +107,14 @@ const Home = () => {
               >
                 <MessageCircle className="mr-2 h-5 w-5" />
                 Contact on WhatsApp
+              </Button>
+              <Button 
+                size="lg" 
+                variant="outline"
+                asChild
+                className="bg-white/10 border-white text-white hover:bg-white hover:text-primary"
+              >
+                <Link to="/about">Learn More</Link>
               </Button>
             </div>
           </div>
@@ -312,6 +320,14 @@ const Home = () => {
               className="bg-white/10 border-white text-white hover:bg-white hover:text-primary"
             >
               <Link to="/contact">Get in Touch</Link>
+            </Button>
+            <Button 
+              size="lg" 
+              variant="outline"
+              asChild
+              className="bg-white/10 border-white text-white hover:bg-white hover:text-primary"
+            >
+              <Link to="/about">Learn More</Link>
             </Button>
           </div>
         </div>

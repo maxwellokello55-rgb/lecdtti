@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Camera, Video } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Camera, Video, Youtube } from "lucide-react";
 import morningBriefing from "@/assets/morning-briefing.jpg";
 import principalOffice from "@/assets/principal-office.jpg";
 import staffPhoto from "@/assets/staff-photo.jpg";
@@ -150,12 +151,24 @@ const Gallery = () => {
           {/* Info Section */}
           <div className="mt-16">
             <Card className="bg-gradient-to-r from-primary/10 to-secondary/10 border-none shadow-soft">
-              <CardContent className="py-8 text-center">
-                <h3 className="text-xl font-semibold mb-4">Want to Share Your LECDTTI Story?</h3>
-                <p className="text-muted-foreground max-w-2xl mx-auto">
-                  If you have photos or videos from your time at LECDTTI that you'd like to share, 
-                  we'd love to hear from you! Contact us to contribute to our growing gallery.
-                </p>
+              <CardContent className="py-8 text-center space-y-6">
+                <div>
+                  <h3 className="text-xl font-semibold mb-4">Want to Share Your LECDTTI Story?</h3>
+                  <p className="text-muted-foreground max-w-2xl mx-auto">
+                    If you have photos or videos from your time at LECDTTI that you'd like to share, 
+                    we'd love to hear from you! Contact us to contribute to our growing gallery.
+                  </p>
+                </div>
+                <div className="pt-4">
+                  <Button 
+                    size="lg" 
+                    variant="default"
+                    onClick={() => window.open("https://youtube.com/@LECDTTI", "_blank")}
+                  >
+                    <Youtube className="mr-2 h-5 w-5" />
+                    Visit Our YouTube Channel
+                  </Button>
+                </div>
               </CardContent>
             </Card>
           </div>

@@ -189,6 +189,9 @@ const Programs = () => {
             <Button size="lg" variant="outline" asChild>
               <Link to="/contact">Contact Us</Link>
             </Button>
+            <Button size="lg" variant="outline" asChild>
+              <Link to="/about">Learn More</Link>
+            </Button>
           </div>
         </div>
       </section>

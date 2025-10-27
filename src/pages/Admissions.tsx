@@ -217,6 +217,9 @@ const Admissions = () => {
             <Button size="lg" variant="outline" className="bg-white/10 border-white text-white hover:bg-white hover:text-primary" asChild>
               <Link to="/programs">View Programs</Link>
             </Button>
+            <Button size="lg" variant="outline" className="bg-white/10 border-white text-white hover:bg-white hover:text-primary" asChild>
+              <Link to="/about">Learn More</Link>
+            </Button>
           </div>
         </div>
       </section>
