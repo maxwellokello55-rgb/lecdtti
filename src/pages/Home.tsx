@@ -152,7 +152,12 @@ const Home = () => {
       {/* Photo Gallery Carousel */}
       <section className="py-20 px-6 bg-muted/30">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Life at LECDTTI</h2>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Vibrant Student Life at LECDTTI</h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Experience the energy and spirit of our school community through our diverse activities and events.
+            </p>
+          </div>
           
           <div className="relative">
             {/* Main Image */}
