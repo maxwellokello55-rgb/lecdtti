@@ -12,10 +12,13 @@ const Navigation = () => {
     { to: "/about", label: "About Us" },
     { to: "/programs", label: "Programs" },
     { to: "/admissions", label: "Admissions" },
+    { to: "/student-life", label: "Student Life" },
     { to: "/campus-development", label: "Campus Development" },
     { to: "/staff", label: "Staff & Management" },
     { to: "/gallery", label: "Gallery" },
     { to: "/news-events", label: "News & Events" },
+    { to: "/resources", label: "Resources" },
+    { to: "/faqs", label: "FAQs" },
     { to: "/contact", label: "Contact" },
   ];
 
