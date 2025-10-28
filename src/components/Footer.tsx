@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail, MessageCircle } from "lucide-react";
+import schoolLogo from "@/assets/school-logo.png";
 
 const Footer = () => {
   return (
@@ -8,7 +9,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* About */}
           <div>
-            <h3 className="font-bold text-xl mb-4">LECDTTI</h3>
+            <div className="flex items-center gap-3 mb-4">
+              <img src={schoolLogo} alt="LECDTTI Logo" className="w-12 h-12 object-contain" />
+              <h3 className="font-bold text-xl">LECDTTI</h3>
+            </div>
             <p className="text-white/80 text-sm">
               Empowering educators to nurture the next generation through professional training in Early Childhood Development.
             </p>

@@ -6,18 +6,25 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
-import About from "./pages/About";
-import Programs from "./pages/Programs";
-import Admissions from "./pages/Admissions";
-import CampusDevelopment from "./pages/CampusDevelopment";
-import Staff from "./pages/Staff";
-import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
 import NewsEvents from "./pages/NewsEvents";
-import StudentLife from "./pages/StudentLife";
-import FAQs from "./pages/FAQs";
-import Resources from "./pages/Resources";
 import NotFound from "./pages/NotFound";
+// About Pages
+import WhoWeAre from "./pages/about/WhoWeAre";
+import MissionVision from "./pages/about/MissionVision";
+import Leadership from "./pages/about/Leadership";
+import Facilities from "./pages/about/Facilities";
+import Accreditation from "./pages/about/Accreditation";
+// Programs Pages
+import Diploma from "./pages/programs/Diploma";
+import Certificate from "./pages/programs/Certificate";
+import ShortCourses from "./pages/programs/ShortCourses";
+import TeachingPractice from "./pages/programs/TeachingPractice";
+import Curriculum from "./pages/programs/Curriculum";
+// Admissions Pages
+import HowToApply from "./pages/admissions/HowToApply";
+// Student Life Pages
+import InstitutionLife from "./pages/student-life/InstitutionLife";
 
 const queryClient = new QueryClient();
 
@@ -32,16 +39,24 @@ const App = () => (
           <main className="flex-grow">
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/programs" element={<Programs />} />
-              <Route path="/admissions" element={<Admissions />} />
-              <Route path="/campus-development" element={<CampusDevelopment />} />
-              <Route path="/staff" element={<Staff />} />
-              <Route path="/student-life" element={<StudentLife />} />
-              <Route path="/gallery" element={<Gallery />} />
+              {/* About Routes */}
+              <Route path="/about/who-we-are" element={<WhoWeAre />} />
+              <Route path="/about/mission-vision" element={<MissionVision />} />
+              <Route path="/about/leadership" element={<Leadership />} />
+              <Route path="/about/facilities" element={<Facilities />} />
+              <Route path="/about/accreditation" element={<Accreditation />} />
+              {/* Programs Routes */}
+              <Route path="/programs/diploma" element={<Diploma />} />
+              <Route path="/programs/certificate" element={<Certificate />} />
+              <Route path="/programs/short-courses" element={<ShortCourses />} />
+              <Route path="/programs/teaching-practice" element={<TeachingPractice />} />
+              <Route path="/programs/curriculum" element={<Curriculum />} />
+              {/* Admissions Routes */}
+              <Route path="/admissions/how-to-apply" element={<HowToApply />} />
+              {/* Student Life Routes */}
+              <Route path="/student-life/institution-life" element={<InstitutionLife />} />
+              {/* News & Contact */}
               <Route path="/news-events" element={<NewsEvents />} />
-              <Route path="/faqs" element={<FAQs />} />
-              <Route path="/resources" element={<Resources />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
