@@ -57,7 +57,7 @@ const FAQs = () => {
       questions: [
         {
           q: "How much is the tuition?",
-          a: "Diploma: UGX 800,000 per semester. Certificate: UGX 600,000 per semester. Child Care Program: UGX 500,000 per semester. Additional fees apply for registration, exams, and accommodation."
+          a: "Diploma: UGX 350,000 per semester. Certificate: UGX 280,000 per semester. Child Care Program: UGX 280,000 per semester. Additional fees apply for registration, exams, and accommodation."
         },
         {
           q: "Can I pay in installments?",

@@ -23,10 +23,10 @@ const Footer = () => {
           <div>
             <h3 className="font-bold text-lg mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link to="/about" className="text-white/80 hover:text-white transition-colors">About Us</Link></li>
-              <li><Link to="/programs" className="text-white/80 hover:text-white transition-colors">Programs</Link></li>
-              <li><Link to="/admissions" className="text-white/80 hover:text-white transition-colors">Admissions</Link></li>
-              <li><Link to="/campus-development" className="text-white/80 hover:text-white transition-colors">Campus Development</Link></li>
+              <li><Link to="/about/who-we-are" className="text-white/80 hover:text-white transition-colors">About Us</Link></li>
+              <li><Link to="/programs/diploma" className="text-white/80 hover:text-white transition-colors">Programs</Link></li>
+              <li><Link to="/admissions/how-to-apply" className="text-white/80 hover:text-white transition-colors">Admissions</Link></li>
+              <li><Link to="/student-life/institution-life" className="text-white/80 hover:text-white transition-colors">Student Life</Link></li>
             </ul>
           </div>
 
@@ -34,9 +34,20 @@ const Footer = () => {
           <div>
             <h3 className="font-bold text-lg mb-4">More</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link to="/staff" className="text-white/80 hover:text-white transition-colors">Staff & Management</Link></li>
-              <li><Link to="/gallery" className="text-white/80 hover:text-white transition-colors">Gallery</Link></li>
+              <li><Link to="/about/leadership" className="text-white/80 hover:text-white transition-colors">Leadership & Staff</Link></li>
+              <li><Link to="/student-life/gallery" className="text-white/80 hover:text-white transition-colors">Gallery</Link></li>
+              <li><Link to="/news-events" className="text-white/80 hover:text-white transition-colors">News & Events</Link></li>
               <li><Link to="/contact" className="text-white/80 hover:text-white transition-colors">Contact Us</Link></li>
+              <li>
+                <a 
+                  href="https://www.youtube.com/@LECDTTI" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-white/80 hover:text-white transition-colors"
+                >
+                  YouTube Channel
+                </a>
+              </li>
             </ul>
           </div>
 

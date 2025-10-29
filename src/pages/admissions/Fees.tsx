@@ -25,11 +25,11 @@ const Fees = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="bg-muted/50 p-4 rounded-lg">
                   <div className="text-sm text-muted-foreground mb-1">Tuition per Semester</div>
-                  <div className="text-2xl font-bold text-primary">UGX 800,000</div>
+                  <div className="text-2xl font-bold text-primary">UGX 350,000</div>
                 </div>
                 <div className="bg-muted/50 p-4 rounded-lg">
                   <div className="text-sm text-muted-foreground mb-1">Total Program Cost (4 semesters)</div>
-                  <div className="text-2xl font-bold text-primary">UGX 3,200,000</div>
+                  <div className="text-2xl font-bold text-primary">UGX 1,400,000</div>
                 </div>
               </div>
               <p className="text-sm text-muted-foreground">Duration: 2 years (4 semesters)</p>
@@ -47,11 +47,11 @@ const Fees = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="bg-muted/50 p-4 rounded-lg">
                   <div className="text-sm text-muted-foreground mb-1">Tuition per Semester</div>
-                  <div className="text-2xl font-bold text-secondary">UGX 600,000</div>
+                  <div className="text-2xl font-bold text-secondary">UGX 280,000</div>
                 </div>
                 <div className="bg-muted/50 p-4 rounded-lg">
                   <div className="text-sm text-muted-foreground mb-1">Total Program Cost (4 semesters)</div>
-                  <div className="text-2xl font-bold text-secondary">UGX 2,400,000</div>
+                  <div className="text-2xl font-bold text-secondary">UGX 1,120,000</div>
                 </div>
               </div>
               <p className="text-sm text-muted-foreground">Duration: 2 years (4 semesters)</p>
@@ -69,11 +69,11 @@ const Fees = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="bg-muted/50 p-4 rounded-lg">
                   <div className="text-sm text-muted-foreground mb-1">Tuition per Semester</div>
-                  <div className="text-2xl font-bold text-accent">UGX 500,000</div>
+                  <div className="text-2xl font-bold text-accent">UGX 280,000</div>
                 </div>
                 <div className="bg-muted/50 p-4 rounded-lg">
                   <div className="text-sm text-muted-foreground mb-1">Total Program Cost (2 semesters)</div>
-                  <div className="text-2xl font-bold text-accent">UGX 1,000,000</div>
+                  <div className="text-2xl font-bold text-accent">UGX 560,000</div>
                 </div>
               </div>
               <p className="text-sm text-muted-foreground">Duration: 1 year (2 semesters)</p>

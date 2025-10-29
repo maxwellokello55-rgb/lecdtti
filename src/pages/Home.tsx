@@ -179,9 +179,47 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Photo Gallery Carousel */}
+      {/* Videos Section */}
       <section className="py-20 px-6 bg-muted/30">
         <div className="container mx-auto max-w-6xl">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Experience LECDTTI</h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Watch our students and tutors in action
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            <div className="rounded-lg overflow-hidden shadow-soft">
+              <video 
+                controls 
+                className="w-full h-auto"
+                poster="/placeholder.svg"
+              >
+                <source src="/videos/students-morning-circle.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <div className="bg-white p-4">
+                <h3 className="font-semibold text-lg text-primary">Students Morning Circle</h3>
+                <p className="text-muted-foreground text-sm">Our students engaging in daily morning activities</p>
+              </div>
+            </div>
+            <div className="rounded-lg overflow-hidden shadow-soft">
+              <video 
+                controls 
+                className="w-full h-auto"
+                poster="/placeholder.svg"
+              >
+                <source src="/videos/tutor-demonstration-lesson.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <div className="bg-white p-4">
+                <h3 className="font-semibold text-lg text-primary">Tutor Demonstration Lesson</h3>
+                <p className="text-muted-foreground text-sm">Watch our experienced tutors conducting demonstration lessons</p>
+              </div>
+            </div>
+          </div>
+
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Vibrant Student Life at LECDTTI</h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
