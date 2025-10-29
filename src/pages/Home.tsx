@@ -121,6 +121,28 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Announcements Section */}
+      <section className="py-12 px-6 bg-primary/5">
+        <div className="container mx-auto max-w-6xl">
+          <div className="bg-white rounded-lg shadow-soft p-8 border-l-4 border-primary">
+            <h2 className="text-2xl md:text-3xl font-bold text-primary mb-4 flex items-center gap-3">
+              <Award className="h-8 w-8" />
+              Latest Announcement
+            </h2>
+            <p className="text-xl font-semibold text-foreground mb-2">
+              Admissions Open for 2025 Intake!
+            </p>
+            <p className="text-muted-foreground mb-4">
+              Applications are now being accepted for our Diploma and Certificate programs in Early Childhood Development. 
+              Don't miss this opportunity to start your teaching career.
+            </p>
+            <Button asChild>
+              <Link to="/admissions/how-to-apply">Apply Now</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Stats Section */}
       <section className="py-16 px-6 bg-background">
         <div className="container mx-auto max-w-6xl">
@@ -292,6 +314,36 @@ const Home = () => {
             <Button size="lg" asChild>
               <Link to="/programs">Learn More About Our Programs</Link>
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-20 px-6 bg-muted/30">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Student Testimonials</h2>
+          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+            Hear from our graduates about their experience at LECDTTI
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <Card className="shadow-soft">
+              <CardContent className="pt-6">
+                <p className="text-muted-foreground italic mb-4">
+                  "LECDTTI gave me the practical skills and confidence I needed to become an effective early childhood educator. 
+                  The teaching practice was invaluable, and the staff were incredibly supportive throughout my journey."
+                </p>
+                <div className="font-semibold text-primary">- Grace Akello, Diploma Graduate 2023</div>
+              </CardContent>
+            </Card>
+            <Card className="shadow-soft">
+              <CardContent className="pt-6">
+                <p className="text-muted-foreground italic mb-4">
+                  "The training I received has equipped me to make a real difference in children's lives. 
+                  I now run my own nursery school and apply everything I learned at LECDTTI every day."
+                </p>
+                <div className="font-semibold text-primary">- Betty Auma, Certificate Graduate 2022</div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>

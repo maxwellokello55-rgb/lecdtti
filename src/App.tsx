@@ -23,8 +23,15 @@ import TeachingPractice from "./pages/programs/TeachingPractice";
 import Curriculum from "./pages/programs/Curriculum";
 // Admissions Pages
 import HowToApply from "./pages/admissions/HowToApply";
+import Requirements from "./pages/admissions/Requirements";
+import Fees from "./pages/admissions/Fees";
+import Scholarships from "./pages/admissions/Scholarships";
+import IntakeDates from "./pages/admissions/IntakeDates";
+import AdmissionsFAQs from "./pages/admissions/FAQs";
 // Student Life Pages
 import InstitutionLife from "./pages/student-life/InstitutionLife";
+import ClubsActivities from "./pages/student-life/ClubsActivities";
+import GalleryPage from "./pages/student-life/Gallery";
 
 const queryClient = new QueryClient();
 
@@ -53,8 +60,15 @@ const App = () => (
               <Route path="/programs/curriculum" element={<Curriculum />} />
               {/* Admissions Routes */}
               <Route path="/admissions/how-to-apply" element={<HowToApply />} />
+              <Route path="/admissions/requirements" element={<Requirements />} />
+              <Route path="/admissions/fees" element={<Fees />} />
+              <Route path="/admissions/scholarships" element={<Scholarships />} />
+              <Route path="/admissions/intake-dates" element={<IntakeDates />} />
+              <Route path="/admissions/faqs" element={<AdmissionsFAQs />} />
               {/* Student Life Routes */}
               <Route path="/student-life/institution-life" element={<InstitutionLife />} />
+              <Route path="/student-life/clubs-activities" element={<ClubsActivities />} />
+              <Route path="/student-life/gallery" element={<GalleryPage />} />
               {/* News & Contact */}
               <Route path="/news-events" element={<NewsEvents />} />
               <Route path="/contact" element={<Contact />} />
