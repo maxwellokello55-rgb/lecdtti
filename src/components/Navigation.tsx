@@ -3,6 +3,12 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
 import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
@@ -78,33 +84,89 @@ const Navigation = () => {
               </Button>
             </Link>
 
-            {/* About Us */}
-            <Link to="/about">
-              <Button variant="ghost" className="text-foreground hover:text-primary">
-                About Us
-              </Button>
-            </Link>
+            {/* About Us Dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" className="text-foreground hover:text-primary">
+                  About Us <ChevronDown className="ml-1 h-4 w-4" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="bg-background z-50">
+                <DropdownMenuItem asChild>
+                  <Link to="/about" className="w-full cursor-pointer">About Us Home</Link>
+                </DropdownMenuItem>
+                {aboutDropdown.map((item) => (
+                  <DropdownMenuItem key={item.to} asChild>
+                    <Link to={item.to} className="w-full cursor-pointer">
+                      {item.label}
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
 
-            {/* Programs */}
-            <Link to="/programs">
-              <Button variant="ghost" className="text-foreground hover:text-primary">
-                Programs
-              </Button>
-            </Link>
+            {/* Programs Dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" className="text-foreground hover:text-primary">
+                  Programs <ChevronDown className="ml-1 h-4 w-4" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="bg-background z-50">
+                <DropdownMenuItem asChild>
+                  <Link to="/programs" className="w-full cursor-pointer">Programs Home</Link>
+                </DropdownMenuItem>
+                {programsDropdown.map((item) => (
+                  <DropdownMenuItem key={item.to} asChild>
+                    <Link to={item.to} className="w-full cursor-pointer">
+                      {item.label}
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
 
-            {/* Admissions */}
-            <Link to="/admissions">
-              <Button variant="ghost" className="text-foreground hover:text-primary">
-                Admissions
-              </Button>
-            </Link>
+            {/* Admissions Dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" className="text-foreground hover:text-primary">
+                  Admissions <ChevronDown className="ml-1 h-4 w-4" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="bg-background z-50">
+                <DropdownMenuItem asChild>
+                  <Link to="/admissions" className="w-full cursor-pointer">Admissions Home</Link>
+                </DropdownMenuItem>
+                {admissionsDropdown.map((item) => (
+                  <DropdownMenuItem key={item.to} asChild>
+                    <Link to={item.to} className="w-full cursor-pointer">
+                      {item.label}
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
 
-            {/* Student Life */}
-            <Link to="/student-life">
-              <Button variant="ghost" className="text-foreground hover:text-primary">
-                Student Life
-              </Button>
-            </Link>
+            {/* Student Life Dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" className="text-foreground hover:text-primary">
+                  Student Life <ChevronDown className="ml-1 h-4 w-4" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="bg-background z-50">
+                <DropdownMenuItem asChild>
+                  <Link to="/student-life" className="w-full cursor-pointer">Student Life Home</Link>
+                </DropdownMenuItem>
+                {studentLifeDropdown.map((item) => (
+                  <DropdownMenuItem key={item.to} asChild>
+                    <Link to={item.to} className="w-full cursor-pointer">
+                      {item.label}
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
 
             {/* News & Events */}
             <Link to="/news-events">
