@@ -193,6 +193,9 @@ const Home = () => {
             <div className="rounded-lg overflow-hidden shadow-soft">
               <video 
                 controls 
+                autoPlay
+                muted
+                loop
                 className="w-full h-auto"
                 poster="/placeholder.svg"
               >
@@ -207,6 +210,9 @@ const Home = () => {
             <div className="rounded-lg overflow-hidden shadow-soft">
               <video 
                 controls 
+                autoPlay
+                muted
+                loop
                 className="w-full h-auto"
                 poster="/placeholder.svg"
               >
