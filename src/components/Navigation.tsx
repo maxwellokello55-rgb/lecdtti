@@ -1,17 +1,21 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
 import schoolLogo from "@/assets/school-logo.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [aboutOpen, setAboutOpen] = useState(false);
+  const [programsOpen, setProgramsOpen] = useState(false);
+  const [admissionsOpen, setAdmissionsOpen] = useState(false);
+  const [studentLifeOpen, setStudentLifeOpen] = useState(false);
+  const [newsContactOpen, setNewsContactOpen] = useState(false);
 
   const aboutDropdown = [
     { to: "/about/who-we-are", label: "Who We Are" },
@@ -74,95 +78,47 @@ const Navigation = () => {
               </Button>
             </Link>
 
-            {/* About Us Dropdown */}
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="ghost" className="text-foreground hover:text-primary">
-                  About Us <ChevronDown className="ml-1 h-4 w-4" />
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="bg-background z-50">
-                {aboutDropdown.map((item) => (
-                  <DropdownMenuItem key={item.to} asChild>
-                    <Link to={item.to} className="w-full cursor-pointer">
-                      {item.label}
-                    </Link>
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
+            {/* About Us */}
+            <Link to="/about">
+              <Button variant="ghost" className="text-foreground hover:text-primary">
+                About Us
+              </Button>
+            </Link>
 
-            {/* Programs Dropdown */}
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="ghost" className="text-foreground hover:text-primary">
-                  Programs <ChevronDown className="ml-1 h-4 w-4" />
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="bg-background z-50">
-                {programsDropdown.map((item) => (
-                  <DropdownMenuItem key={item.to} asChild>
-                    <Link to={item.to} className="w-full cursor-pointer">
-                      {item.label}
-                    </Link>
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
+            {/* Programs */}
+            <Link to="/programs">
+              <Button variant="ghost" className="text-foreground hover:text-primary">
+                Programs
+              </Button>
+            </Link>
 
-            {/* Admissions Dropdown */}
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="ghost" className="text-foreground hover:text-primary">
-                  Admissions <ChevronDown className="ml-1 h-4 w-4" />
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="bg-background z-50">
-                {admissionsDropdown.map((item) => (
-                  <DropdownMenuItem key={item.to} asChild>
-                    <Link to={item.to} className="w-full cursor-pointer">
-                      {item.label}
-                    </Link>
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
+            {/* Admissions */}
+            <Link to="/admissions">
+              <Button variant="ghost" className="text-foreground hover:text-primary">
+                Admissions
+              </Button>
+            </Link>
 
-            {/* Student Life Dropdown */}
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="ghost" className="text-foreground hover:text-primary">
-                  Student Life <ChevronDown className="ml-1 h-4 w-4" />
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="bg-background z-50">
-                {studentLifeDropdown.map((item) => (
-                  <DropdownMenuItem key={item.to} asChild>
-                    <Link to={item.to} className="w-full cursor-pointer">
-                      {item.label}
-                    </Link>
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
+            {/* Student Life */}
+            <Link to="/student-life">
+              <Button variant="ghost" className="text-foreground hover:text-primary">
+                Student Life
+              </Button>
+            </Link>
 
-            {/* News & Contact Dropdown */}
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="ghost" className="text-foreground hover:text-primary">
-                  News & Contact <ChevronDown className="ml-1 h-4 w-4" />
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="bg-background z-50">
-                {newsContactDropdown.map((item) => (
-                  <DropdownMenuItem key={item.to} asChild>
-                    <Link to={item.to} className="w-full cursor-pointer">
-                      {item.label}
-                    </Link>
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
+            {/* News & Events */}
+            <Link to="/news-events">
+              <Button variant="ghost" className="text-foreground hover:text-primary">
+                News & Events
+              </Button>
+            </Link>
+
+            {/* Contact */}
+            <Link to="/contact">
+              <Button variant="ghost" className="text-foreground hover:text-primary">
+                Contact
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -191,79 +147,110 @@ const Navigation = () => {
             </Link>
 
             {/* About Us Mobile */}
-            <div className="px-4 py-2">
-              <div className="font-semibold text-foreground mb-2">About Us</div>
-              {aboutDropdown.map((item) => (
-                <Link
-                  key={item.to}
-                  to={item.to}
-                  onClick={() => setIsOpen(false)}
-                  className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted rounded-md transition-colors"
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </div>
+            <Collapsible open={aboutOpen} onOpenChange={setAboutOpen}>
+              <div className="px-4 py-2">
+                <CollapsibleTrigger className="flex items-center justify-between w-full font-semibold text-foreground">
+                  <Link to="/about" onClick={() => setIsOpen(false)}>About Us</Link>
+                  {aboutOpen ? <ChevronDown className="h-4 w-4" /> : <ChevronRight className="h-4 w-4" />}
+                </CollapsibleTrigger>
+                <CollapsibleContent className="mt-2 space-y-1">
+                  {aboutDropdown.map((item) => (
+                    <Link
+                      key={item.to}
+                      to={item.to}
+                      onClick={() => setIsOpen(false)}
+                      className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted rounded-md transition-colors"
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </CollapsibleContent>
+              </div>
+            </Collapsible>
 
             {/* Programs Mobile */}
-            <div className="px-4 py-2">
-              <div className="font-semibold text-foreground mb-2">Programs</div>
-              {programsDropdown.map((item) => (
-                <Link
-                  key={item.to}
-                  to={item.to}
-                  onClick={() => setIsOpen(false)}
-                  className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted rounded-md transition-colors"
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </div>
+            <Collapsible open={programsOpen} onOpenChange={setProgramsOpen}>
+              <div className="px-4 py-2">
+                <CollapsibleTrigger className="flex items-center justify-between w-full font-semibold text-foreground">
+                  <Link to="/programs" onClick={() => setIsOpen(false)}>Programs</Link>
+                  {programsOpen ? <ChevronDown className="h-4 w-4" /> : <ChevronRight className="h-4 w-4" />}
+                </CollapsibleTrigger>
+                <CollapsibleContent className="mt-2 space-y-1">
+                  {programsDropdown.map((item) => (
+                    <Link
+                      key={item.to}
+                      to={item.to}
+                      onClick={() => setIsOpen(false)}
+                      className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted rounded-md transition-colors"
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </CollapsibleContent>
+              </div>
+            </Collapsible>
 
             {/* Admissions Mobile */}
-            <div className="px-4 py-2">
-              <div className="font-semibold text-foreground mb-2">Admissions</div>
-              {admissionsDropdown.map((item) => (
-                <Link
-                  key={item.to}
-                  to={item.to}
-                  onClick={() => setIsOpen(false)}
-                  className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted rounded-md transition-colors"
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </div>
+            <Collapsible open={admissionsOpen} onOpenChange={setAdmissionsOpen}>
+              <div className="px-4 py-2">
+                <CollapsibleTrigger className="flex items-center justify-between w-full font-semibold text-foreground">
+                  <Link to="/admissions" onClick={() => setIsOpen(false)}>Admissions</Link>
+                  {admissionsOpen ? <ChevronDown className="h-4 w-4" /> : <ChevronRight className="h-4 w-4" />}
+                </CollapsibleTrigger>
+                <CollapsibleContent className="mt-2 space-y-1">
+                  {admissionsDropdown.map((item) => (
+                    <Link
+                      key={item.to}
+                      to={item.to}
+                      onClick={() => setIsOpen(false)}
+                      className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted rounded-md transition-colors"
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </CollapsibleContent>
+              </div>
+            </Collapsible>
 
             {/* Student Life Mobile */}
-            <div className="px-4 py-2">
-              <div className="font-semibold text-foreground mb-2">Student Life</div>
-              {studentLifeDropdown.map((item) => (
-                <Link
-                  key={item.to}
-                  to={item.to}
-                  onClick={() => setIsOpen(false)}
-                  className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted rounded-md transition-colors"
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </div>
+            <Collapsible open={studentLifeOpen} onOpenChange={setStudentLifeOpen}>
+              <div className="px-4 py-2">
+                <CollapsibleTrigger className="flex items-center justify-between w-full font-semibold text-foreground">
+                  <Link to="/student-life" onClick={() => setIsOpen(false)}>Student Life</Link>
+                  {studentLifeOpen ? <ChevronDown className="h-4 w-4" /> : <ChevronRight className="h-4 w-4" />}
+                </CollapsibleTrigger>
+                <CollapsibleContent className="mt-2 space-y-1">
+                  {studentLifeDropdown.map((item) => (
+                    <Link
+                      key={item.to}
+                      to={item.to}
+                      onClick={() => setIsOpen(false)}
+                      className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted rounded-md transition-colors"
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </CollapsibleContent>
+              </div>
+            </Collapsible>
 
-            {/* News & Contact Mobile */}
-            <div className="px-4 py-2">
-              <div className="font-semibold text-foreground mb-2">News & Contact</div>
-              {newsContactDropdown.map((item) => (
-                <Link
-                  key={item.to}
-                  to={item.to}
-                  onClick={() => setIsOpen(false)}
-                  className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted rounded-md transition-colors"
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </div>
+            {/* News & Events */}
+            <Link
+              to="/news-events"
+              onClick={() => setIsOpen(false)}
+              className="block px-4 py-2 text-foreground hover:bg-muted rounded-md transition-colors"
+            >
+              News & Events
+            </Link>
+
+            {/* Contact */}
+            <Link
+              to="/contact"
+              onClick={() => setIsOpen(false)}
+              className="block px-4 py-2 text-foreground hover:bg-muted rounded-md transition-colors"
+            >
+              Contact
+            </Link>
           </div>
         )}
       </div>
