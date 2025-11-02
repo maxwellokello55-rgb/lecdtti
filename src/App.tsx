@@ -6,6 +6,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
+import About from "./pages/About";
+import Programs from "./pages/Programs";
+import Admissions from "./pages/Admissions";
+import StudentLife from "./pages/StudentLife";
 import Contact from "./pages/Contact";
 import NewsEvents from "./pages/NewsEvents";
 import NotFound from "./pages/NotFound";
@@ -46,6 +50,11 @@ const App = () => (
           <main className="flex-grow">
             <Routes>
               <Route path="/" element={<Home />} />
+              {/* Main Pages */}
+              <Route path="/about" element={<About />} />
+              <Route path="/programs" element={<Programs />} />
+              <Route path="/admissions" element={<Admissions />} />
+              <Route path="/student-life" element={<StudentLife />} />
               {/* About Routes */}
               <Route path="/about/who-we-are" element={<WhoWeAre />} />
               <Route path="/about/mission-vision" element={<MissionVision />} />
