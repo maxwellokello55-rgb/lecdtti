@@ -29,7 +29,7 @@ const Admissions = () => {
     return () => clearInterval(interval);
   }, [backgrounds.length]);
   const handleWhatsApp = () => {
-    window.open("https://wa.me/256", "_blank");
+    window.open("https://wa.me/256783254350", "_blank");
   };
 
   return (

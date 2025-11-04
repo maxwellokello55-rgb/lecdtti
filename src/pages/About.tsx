@@ -209,19 +209,25 @@ const About = () => {
                 <li className="flex items-start">
                   <span className="flex-shrink-0 w-2 h-2 mt-2 mr-3 bg-accent rounded-full"></span>
                   <span className="text-muted-foreground">
-                    <strong>Facility Limitations:</strong> Currently operating from rented premises with high monthly costs
+                    <strong>Facility Limitations:</strong> Currently operating from rented premises with monthly rent of UGX 1,500,000
                   </span>
                 </li>
                 <li className="flex items-start">
                   <span className="flex-shrink-0 w-2 h-2 mt-2 mr-3 bg-accent rounded-full"></span>
                   <span className="text-muted-foreground">
-                    <strong>Resource Constraints:</strong> Limited ICT equipment and inadequate library resources
+                    <strong>Resource Constraints:</strong> Limited ICT equipment (only 3 laptops for 250 students) and inadequate library resources
                   </span>
                 </li>
                 <li className="flex items-start">
                   <span className="flex-shrink-0 w-2 h-2 mt-2 mr-3 bg-accent rounded-full"></span>
                   <span className="text-muted-foreground">
-                    <strong>Infrastructure Gaps:</strong> Need for improved classrooms, staff housing, and sanitation facilities
+                    <strong>Infrastructure Gaps:</strong> Only 2 VIP latrines for entire student body, need for staff housing and improved facilities
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="flex-shrink-0 w-2 h-2 mt-2 mr-3 bg-accent rounded-full"></span>
+                  <span className="text-muted-foreground">
+                    <strong>Human Resources:</strong> Low staff-to-student ratio (9:250) constraining quality of teaching and support services
                   </span>
                 </li>
                 <li className="flex items-start">
@@ -232,10 +238,61 @@ const About = () => {
                 </li>
               </ul>
               <p className="text-muted-foreground leading-relaxed pt-4">
-                Our comprehensive strategic business plan addresses these challenges through targeted investments 
-                in permanent infrastructure, expanded human resources, and enhanced learning facilities to ensure 
-                sustainable delivery of quality early childhood teacher training.
+                Our comprehensive strategic business plan (2025-2027) addresses these challenges through a UGX 550,000,000 investment 
+                in permanent infrastructure, expanded human resources to 18 tutors, and enhanced learning facilities to ensure 
+                sustainable delivery of quality early childhood teacher training and achieve our goal of 500 students by Year 3.
               </p>
+            </CardContent>
+          </Card>
+
+          {/* SWOT Analysis */}
+          <Card className="shadow-soft">
+            <CardHeader>
+              <CardTitle className="text-2xl text-primary">SWOT Analysis</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-3">
+                  <h4 className="font-semibold text-lg text-primary">Strengths</h4>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li>• Specialized focus on Early Childhood Development training</li>
+                    <li>• 95% female enrollment supporting gender equity in education</li>
+                    <li>• Partnership with Kyambogo University for student registration</li>
+                    <li>• Growing demand for qualified ECD teachers in Northern Uganda</li>
+                    <li>• Strategic location in Lira City, a growing urban hub</li>
+                  </ul>
+                </div>
+                <div className="space-y-3">
+                  <h4 className="font-semibold text-lg text-accent">Weaknesses</h4>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li>• Operating from rented premises (UGX 1.5M/month)</li>
+                    <li>• Limited ICT resources (only 3 laptops)</li>
+                    <li>• Low staff-to-student ratio (1:28)</li>
+                    <li>• Inadequate sanitation and infrastructure</li>
+                    <li>• Pending independent MoES registration</li>
+                  </ul>
+                </div>
+                <div className="space-y-3">
+                  <h4 className="font-semibold text-lg text-secondary">Opportunities</h4>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li>• Growing demand for ECD teachers in Uganda</li>
+                    <li>• Government emphasis on early childhood education</li>
+                    <li>• Potential for donor partnerships and grants</li>
+                    <li>• Expansion into short courses and in-service training</li>
+                    <li>• Alumni network for referrals and advocacy</li>
+                  </ul>
+                </div>
+                <div className="space-y-3">
+                  <h4 className="font-semibold text-lg" style={{color: "hsl(var(--destructive))"}}> Threats</h4>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li>• Competition from established teacher training institutions</li>
+                    <li>• Delays in MoES registration process</li>
+                    <li>• Economic challenges affecting student enrollment</li>
+                    <li>• Difficulty attracting and retaining qualified tutors</li>
+                    <li>• Dependence on tuition fees for revenue</li>
+                  </ul>
+                </div>
+              </div>
             </CardContent>
           </Card>
         </div>

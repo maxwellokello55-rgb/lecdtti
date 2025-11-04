@@ -31,12 +31,44 @@ const Leadership = () => {
                 Management Structure
               </CardTitle>
             </CardHeader>
-            <CardContent className="space-y-4 text-muted-foreground">
+            <CardContent className="space-y-6 text-muted-foreground">
               <p>
                 LECDTTI is governed by a Board of Directors that provides strategic oversight and ensures the institute's adherence to its mission and values. The day-to-day operations are managed by the Principal, who works closely with the teaching staff to deliver high-quality education.
               </p>
+              
+              <div className="space-y-4">
+                <h3 className="font-semibold text-lg text-foreground">Board of Directors</h3>
+                <p>Our Board comprises experienced professionals who provide strategic direction and oversight:</p>
+                <ul className="space-y-1 ml-4">
+                  <li>• Ogwang Moses (Chairman & Principal)</li>
+                  <li>• Ajok Joan (Warden)</li>
+                  <li>• Okello Geoffrey</li>
+                  <li>• Orac Joe Jaspher</li>
+                  <li>• Angole Godfrey</li>
+                  <li>• Otile Alfred</li>
+                  <li>• Adur Ruth</li>
+                </ul>
+                <p className="text-sm italic">Key Responsibilities: Strategic oversight, policy formulation, fundraising, financial oversight, accountability to stakeholders, and long-term planning for institutional growth.</p>
+              </div>
+
+              <div className="space-y-4">
+                <h3 className="font-semibold text-lg text-foreground">Executive Leadership</h3>
+                <div className="border-l-4 border-primary pl-4 space-y-2">
+                  <h4 className="font-semibold text-primary">Principal: Ogwang Moses</h4>
+                  <p className="text-sm">Chief executive officer responsible for overall leadership, academic affairs, external relations (Kyambogo University, MoES), staff management, and financial oversight.</p>
+                </div>
+                <div className="border-l-4 border-secondary pl-4 space-y-2">
+                  <h4 className="font-semibold text-secondary">Warden: Ajok Joan</h4>
+                  <p className="text-sm">Manages student welfare, hostel management, discipline, and facility maintenance coordination.</p>
+                </div>
+                <div className="border-l-4 border-accent pl-4 space-y-2">
+                  <h4 className="font-semibold text-accent">Project Manager: Opio Denis</h4>
+                  <p className="text-sm">Oversees all construction projects, ensuring adherence to timelines and budget, managing building teams.</p>
+                </div>
+              </div>
+
               <p>
-                Our current team consists of 9 dedicated staff members, including qualified tutors with expertise in early childhood development. As part of our growth plan, we are actively recruiting an additional 9 tutors to bring our total staff to 18, ensuring an improved student-to-teacher ratio and enhanced learning outcomes.
+                Our current team consists of 9 dedicated staff members, including qualified Grade V and Diploma-level educators, with several tutors holding Bachelor's degrees in education. As part of our growth plan, we are actively recruiting an additional 9 tutors to bring our total staff to 18, ensuring an improved student-to-teacher ratio and enhanced learning outcomes.
               </p>
             </CardContent>
           </Card>

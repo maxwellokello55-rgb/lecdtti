@@ -131,26 +131,104 @@ const Facilities = () => {
             <CardHeader>
               <CardTitle className="flex items-center gap-3 text-2xl">
                 <Target className="h-8 w-8 text-primary" />
-                Future Campus Development
+                Strategic Campus Development Plan (2025-2027)
               </CardTitle>
             </CardHeader>
-            <CardContent className="space-y-4">
+            <CardContent className="space-y-6">
               <p className="text-muted-foreground">
-                Our strategic development plan includes the acquisition of permanent land and the construction of state-of-the-art facilities to support our growing student body and enhance the quality of education we provide.
+                Our comprehensive three-year strategic development plan includes the acquisition of permanent land and construction 
+                of state-of-the-art facilities to transform LECDTTI into a premier center of excellence for early childhood teacher education.
               </p>
-              <div className="bg-white rounded-lg p-6">
-                <h3 className="font-bold text-lg mb-4 text-foreground">Planned Facilities Include:</h3>
-                <ul className="space-y-2">
-                  {plannedFacilities.map((facility, index) => (
-                    <li key={index} className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-muted-foreground">{facility}</span>
-                    </li>
-                  ))}
-                </ul>
+              
+              <div className="bg-white rounded-lg p-6 border-l-4 border-primary">
+                <h3 className="font-bold text-2xl mb-2 text-primary">Phase 1 Budget: UGX 550,000,000</h3>
+                <p className="text-sm text-muted-foreground mb-4">Capital investment for permanent campus establishment</p>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <div className="flex justify-between items-center p-3 bg-muted/30 rounded">
+                      <span className="text-sm font-medium">Land Purchase (1 acre)</span>
+                      <span className="font-bold text-primary">UGX 150M</span>
+                    </div>
+                    <div className="flex justify-between items-center p-3 bg-muted/30 rounded">
+                      <span className="text-sm font-medium">Admin Block & 6 Classrooms</span>
+                      <span className="font-bold text-primary">UGX 200M</span>
+                    </div>
+                    <div className="flex justify-between items-center p-3 bg-muted/30 rounded">
+                      <span className="text-sm font-medium">Library & ICT Lab</span>
+                      <span className="font-bold text-primary">UGX 50M</span>
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="flex justify-between items-center p-3 bg-muted/30 rounded">
+                      <span className="text-sm font-medium">Staff Housing (2 units)</span>
+                      <span className="font-bold text-primary">UGX 40M</span>
+                    </div>
+                    <div className="flex justify-between items-center p-3 bg-muted/30 rounded">
+                      <span className="text-sm font-medium">VIP Sanitation Facilities</span>
+                      <span className="font-bold text-primary">UGX 30M</span>
+                    </div>
+                    <div className="flex justify-between items-center p-3 bg-muted/30 rounded">
+                      <span className="text-sm font-medium">Kitchen & Dining Facility</span>
+                      <span className="font-bold text-primary">UGX 20M</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="mt-3 p-3 bg-muted/30 rounded">
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm font-medium">Fencing & Landscaping</span>
+                    <span className="font-bold text-primary">UGX 30M</span>
+                  </div>
+                </div>
               </div>
+
+              <div className="bg-white rounded-lg p-6">
+                <h3 className="font-bold text-lg mb-4 text-foreground">Implementation Timeline (12-24 Months)</h3>
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3 p-3 border-l-4 border-primary bg-muted/20 rounded">
+                    <span className="font-semibold text-sm text-primary whitespace-nowrap">Months 0-3:</span>
+                    <span className="text-sm text-muted-foreground">Secure funding and purchase land, complete fencing</span>
+                  </div>
+                  <div className="flex items-start gap-3 p-3 border-l-4 border-secondary bg-muted/20 rounded">
+                    <span className="font-semibold text-sm text-secondary whitespace-nowrap">Months 4-12:</span>
+                    <span className="text-sm text-muted-foreground">Construct administrative block and 6 classrooms</span>
+                  </div>
+                  <div className="flex items-start gap-3 p-3 border-l-4 border-accent bg-muted/20 rounded">
+                    <span className="font-semibold text-sm text-accent whitespace-nowrap">Months 10-15:</span>
+                    <span className="text-sm text-muted-foreground">Build library, ICT lab, staff houses, sanitation, kitchen & dining facilities</span>
+                  </div>
+                  <div className="flex items-start gap-3 p-3 border-l-4 border-primary bg-muted/20 rounded">
+                    <span className="font-semibold text-sm text-primary whitespace-nowrap">Months 12-18:</span>
+                    <span className="text-sm text-muted-foreground">Recruit 9 additional tutors, complete full MoES registration</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-lg p-6">
+                <h3 className="font-bold text-lg mb-4 text-foreground">Strategic Objectives by 2027:</h3>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <div className="text-center p-4 bg-primary/5 rounded-lg">
+                    <div className="text-4xl font-bold text-primary mb-2">500</div>
+                    <p className="text-sm text-muted-foreground">Students Enrolled</p>
+                    <p className="text-xs text-muted-foreground mt-1">(from current 250)</p>
+                  </div>
+                  <div className="text-center p-4 bg-secondary/5 rounded-lg">
+                    <div className="text-4xl font-bold text-secondary mb-2">18</div>
+                    <p className="text-sm text-muted-foreground">Qualified Tutors</p>
+                    <p className="text-xs text-muted-foreground mt-1">(from current 9)</p>
+                  </div>
+                  <div className="text-center p-4 bg-accent/5 rounded-lg">
+                    <div className="text-4xl font-bold text-accent mb-2">100%</div>
+                    <p className="text-sm text-muted-foreground">Campus Ownership</p>
+                    <p className="text-xs text-muted-foreground mt-1">(eliminating UGX 1.5M monthly rent)</p>
+                  </div>
+                </div>
+              </div>
+
               <p className="text-muted-foreground pt-4">
-                This ambitious development project will transform LECDTTI into a premier center of excellence for early childhood teacher education, capable of serving 500 students with world-class facilities and resources.
+                This ambitious development project will establish LECDTTI as a leading institution for early childhood teacher 
+                education in Northern Uganda, with modern infrastructure, enhanced resources, and full independent accreditation 
+                from the Ministry of Education and Sports.
               </p>
             </CardContent>
           </Card>
