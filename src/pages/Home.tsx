@@ -406,10 +406,10 @@ const Home = () => {
             <Button 
               size="lg" 
               variant="outline"
-              asChild
+              onClick={() => window.location.href = '/contact'}
               className="bg-white/10 border-white text-white hover:bg-white hover:text-primary"
             >
-              <Link to="/contact">Get in Touch</Link>
+              Get in Touch
             </Button>
             <Button 
               size="lg" 

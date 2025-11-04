@@ -351,8 +351,8 @@ const FAQs = () => {
                   <MessageCircle className="mr-2 h-5 w-5" />
                   WhatsApp Us
                 </Button>
-                <Button size="lg" variant="outline" asChild>
-                  <Link to="/contact">Contact Us</Link>
+                <Button size="lg" variant="outline" onClick={() => window.location.href = '/contact'}>
+                  Contact Us
                 </Button>
                 <Button size="lg" variant="outline" onClick={() => window.location.href = '/about'}>
                   Learn More

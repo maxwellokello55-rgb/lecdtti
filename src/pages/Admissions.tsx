@@ -214,8 +214,8 @@ const Admissions = () => {
               <MessageCircle className="mr-2 h-5 w-5" />
               Contact Admissions
             </Button>
-            <Button size="lg" variant="outline" className="bg-white/10 border-white text-white hover:bg-white hover:text-primary" asChild>
-              <Link to="/programs">View Programs</Link>
+            <Button size="lg" variant="outline" className="bg-white/10 border-white text-white hover:bg-white hover:text-primary" onClick={() => window.location.href = '/programs'}>
+              View Programs
             </Button>
             <Button size="lg" variant="outline" className="bg-white/10 border-white text-white hover:bg-white hover:text-primary" onClick={() => window.location.href = '/about'}>
               Learn More

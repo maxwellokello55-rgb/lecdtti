@@ -183,11 +183,11 @@ const Programs = () => {
             Take the first step towards becoming a professional early childhood educator
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Button size="lg" asChild>
-              <Link to="/admissions">Apply Now</Link>
+            <Button size="lg" onClick={() => window.location.href = '/admissions'}>
+              Apply Now
             </Button>
-            <Button size="lg" variant="outline" asChild>
-              <Link to="/contact">Contact Us</Link>
+            <Button size="lg" variant="outline" onClick={() => window.location.href = '/contact'}>
+              Contact Us
             </Button>
             <Button size="lg" variant="outline" onClick={() => window.location.href = '/about'}>
               Learn More
