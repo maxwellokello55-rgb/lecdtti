@@ -189,8 +189,8 @@ const Programs = () => {
             <Button size="lg" variant="outline" asChild>
               <Link to="/contact">Contact Us</Link>
             </Button>
-            <Button size="lg" variant="outline" asChild>
-              <Link to="/about">Learn More</Link>
+            <Button size="lg" variant="outline" onClick={() => window.location.href = '/about'}>
+              Learn More
             </Button>
           </div>
         </div>

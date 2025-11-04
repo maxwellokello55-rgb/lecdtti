@@ -111,10 +111,10 @@ const Home = () => {
               <Button 
                 size="lg" 
                 variant="outline"
-                asChild
+                onClick={() => window.location.href = '/about'}
                 className="bg-white/10 border-white text-white hover:bg-white hover:text-primary"
               >
-                <Link to="/about">Learn More</Link>
+                Learn More
               </Button>
             </div>
           </div>
@@ -193,11 +193,8 @@ const Home = () => {
             <div className="rounded-lg overflow-hidden shadow-soft">
               <video 
                 controls 
-                autoPlay
-                muted
-                loop
                 className="w-full h-auto"
-                poster="/placeholder.svg"
+                preload="metadata"
               >
                 <source src="/videos/students-morning-circle.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
@@ -210,11 +207,8 @@ const Home = () => {
             <div className="rounded-lg overflow-hidden shadow-soft">
               <video 
                 controls 
-                autoPlay
-                muted
-                loop
                 className="w-full h-auto"
-                poster="/placeholder.svg"
+                preload="metadata"
               >
                 <source src="/videos/tutor-demonstration-lesson.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
@@ -420,10 +414,10 @@ const Home = () => {
             <Button 
               size="lg" 
               variant="outline"
-              asChild
+              onClick={() => window.location.href = '/about'}
               className="bg-white/10 border-white text-white hover:bg-white hover:text-primary"
             >
-              <Link to="/about">Learn More</Link>
+              Learn More
             </Button>
           </div>
         </div>
