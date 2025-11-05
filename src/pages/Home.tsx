@@ -111,7 +111,7 @@ const Home = () => {
               <Button 
                 size="lg" 
                 variant="outline"
-                onClick={() => window.location.href = '/about'}
+                onClick={() => { window.scrollTo(0, 0); window.location.href = '/about'; }}
                 className="bg-white/10 border-white text-white hover:bg-white hover:text-primary"
               >
                 Learn More
@@ -349,8 +349,11 @@ const Home = () => {
           </div>
 
           <div className="text-center mt-12">
-            <Button size="lg" asChild>
-              <Link to="/programs">Learn More About Our Programs</Link>
+            <Button 
+              size="lg" 
+              onClick={() => { window.scrollTo(0, 0); window.location.href = '/programs'; }}
+            >
+              Learn More About Our Programs
             </Button>
           </div>
         </div>
