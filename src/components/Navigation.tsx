@@ -64,7 +64,7 @@ const Navigation = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3">
+          <Link to="/" onClick={() => window.scrollTo(0, 0)} className="flex items-center space-x-3">
             <img 
               src={schoolLogo} 
               alt="LECDTTI Logo" 
@@ -78,7 +78,7 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-1">
-            <Link to="/">
+            <Link to="/" onClick={() => window.scrollTo(0, 0)}>
               <Button variant="ghost" className="text-foreground hover:text-primary">
                 Home
               </Button>
@@ -93,11 +93,11 @@ const Navigation = () => {
               </DropdownMenuTrigger>
               <DropdownMenuContent className="bg-background z-50">
                 <DropdownMenuItem asChild>
-                  <Link to="/about" className="w-full cursor-pointer">About Us Home</Link>
+                  <Link to="/about" onClick={() => window.scrollTo(0, 0)} className="w-full cursor-pointer">About Us Home</Link>
                 </DropdownMenuItem>
                 {aboutDropdown.map((item) => (
                   <DropdownMenuItem key={item.to} asChild>
-                    <Link to={item.to} className="w-full cursor-pointer">
+                    <Link to={item.to} onClick={() => window.scrollTo(0, 0)} className="w-full cursor-pointer">
                       {item.label}
                     </Link>
                   </DropdownMenuItem>
@@ -114,11 +114,11 @@ const Navigation = () => {
               </DropdownMenuTrigger>
               <DropdownMenuContent className="bg-background z-50">
                 <DropdownMenuItem asChild>
-                  <Link to="/programs" className="w-full cursor-pointer">Programs Home</Link>
+                  <Link to="/programs" onClick={() => window.scrollTo(0, 0)} className="w-full cursor-pointer">Programs Home</Link>
                 </DropdownMenuItem>
                 {programsDropdown.map((item) => (
                   <DropdownMenuItem key={item.to} asChild>
-                    <Link to={item.to} className="w-full cursor-pointer">
+                    <Link to={item.to} onClick={() => window.scrollTo(0, 0)} className="w-full cursor-pointer">
                       {item.label}
                     </Link>
                   </DropdownMenuItem>
@@ -135,11 +135,11 @@ const Navigation = () => {
               </DropdownMenuTrigger>
               <DropdownMenuContent className="bg-background z-50">
                 <DropdownMenuItem asChild>
-                  <Link to="/admissions" className="w-full cursor-pointer">Admissions Home</Link>
+                  <Link to="/admissions" onClick={() => window.scrollTo(0, 0)} className="w-full cursor-pointer">Admissions Home</Link>
                 </DropdownMenuItem>
                 {admissionsDropdown.map((item) => (
                   <DropdownMenuItem key={item.to} asChild>
-                    <Link to={item.to} className="w-full cursor-pointer">
+                    <Link to={item.to} onClick={() => window.scrollTo(0, 0)} className="w-full cursor-pointer">
                       {item.label}
                     </Link>
                   </DropdownMenuItem>
@@ -156,11 +156,11 @@ const Navigation = () => {
               </DropdownMenuTrigger>
               <DropdownMenuContent className="bg-background z-50">
                 <DropdownMenuItem asChild>
-                  <Link to="/student-life" className="w-full cursor-pointer">Student Life Home</Link>
+                  <Link to="/student-life" onClick={() => window.scrollTo(0, 0)} className="w-full cursor-pointer">Student Life Home</Link>
                 </DropdownMenuItem>
                 {studentLifeDropdown.map((item) => (
                   <DropdownMenuItem key={item.to} asChild>
-                    <Link to={item.to} className="w-full cursor-pointer">
+                    <Link to={item.to} onClick={() => window.scrollTo(0, 0)} className="w-full cursor-pointer">
                       {item.label}
                     </Link>
                   </DropdownMenuItem>
@@ -169,14 +169,14 @@ const Navigation = () => {
             </DropdownMenu>
 
             {/* News & Events */}
-            <Link to="/news-events">
+            <Link to="/news-events" onClick={() => window.scrollTo(0, 0)}>
               <Button variant="ghost" className="text-foreground hover:text-primary">
                 News & Events
               </Button>
             </Link>
 
             {/* Contact */}
-            <Link to="/contact">
+            <Link to="/contact" onClick={() => window.scrollTo(0, 0)}>
               <Button variant="ghost" className="text-foreground hover:text-primary">
                 Contact
               </Button>
@@ -202,7 +202,7 @@ const Navigation = () => {
           <div className="lg:hidden pb-4 space-y-2 animate-fade-in">
             <Link
               to="/"
-              onClick={() => setIsOpen(false)}
+              onClick={() => { setIsOpen(false); window.scrollTo(0, 0); }}
               className="block px-4 py-2 text-foreground hover:bg-muted rounded-md transition-colors"
             >
               Home
@@ -212,7 +212,7 @@ const Navigation = () => {
             <Collapsible open={aboutOpen} onOpenChange={setAboutOpen}>
               <div className="px-4 py-2">
                 <CollapsibleTrigger className="flex items-center justify-between w-full font-semibold text-foreground">
-                  <Link to="/about" onClick={() => setIsOpen(false)}>About Us</Link>
+                  <Link to="/about" onClick={() => { setIsOpen(false); window.scrollTo(0, 0); }}>About Us</Link>
                   {aboutOpen ? <ChevronDown className="h-4 w-4" /> : <ChevronRight className="h-4 w-4" />}
                 </CollapsibleTrigger>
                 <CollapsibleContent className="mt-2 space-y-1">
@@ -220,7 +220,7 @@ const Navigation = () => {
                     <Link
                       key={item.to}
                       to={item.to}
-                      onClick={() => setIsOpen(false)}
+                      onClick={() => { setIsOpen(false); window.scrollTo(0, 0); }}
                       className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted rounded-md transition-colors"
                     >
                       {item.label}
@@ -234,7 +234,7 @@ const Navigation = () => {
             <Collapsible open={programsOpen} onOpenChange={setProgramsOpen}>
               <div className="px-4 py-2">
                 <CollapsibleTrigger className="flex items-center justify-between w-full font-semibold text-foreground">
-                  <Link to="/programs" onClick={() => setIsOpen(false)}>Programs</Link>
+                  <Link to="/programs" onClick={() => { setIsOpen(false); window.scrollTo(0, 0); }}>Programs</Link>
                   {programsOpen ? <ChevronDown className="h-4 w-4" /> : <ChevronRight className="h-4 w-4" />}
                 </CollapsibleTrigger>
                 <CollapsibleContent className="mt-2 space-y-1">
@@ -242,7 +242,7 @@ const Navigation = () => {
                     <Link
                       key={item.to}
                       to={item.to}
-                      onClick={() => setIsOpen(false)}
+                      onClick={() => { setIsOpen(false); window.scrollTo(0, 0); }}
                       className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted rounded-md transition-colors"
                     >
                       {item.label}
@@ -256,7 +256,7 @@ const Navigation = () => {
             <Collapsible open={admissionsOpen} onOpenChange={setAdmissionsOpen}>
               <div className="px-4 py-2">
                 <CollapsibleTrigger className="flex items-center justify-between w-full font-semibold text-foreground">
-                  <Link to="/admissions" onClick={() => setIsOpen(false)}>Admissions</Link>
+                  <Link to="/admissions" onClick={() => { setIsOpen(false); window.scrollTo(0, 0); }}>Admissions</Link>
                   {admissionsOpen ? <ChevronDown className="h-4 w-4" /> : <ChevronRight className="h-4 w-4" />}
                 </CollapsibleTrigger>
                 <CollapsibleContent className="mt-2 space-y-1">
@@ -264,7 +264,7 @@ const Navigation = () => {
                     <Link
                       key={item.to}
                       to={item.to}
-                      onClick={() => setIsOpen(false)}
+                      onClick={() => { setIsOpen(false); window.scrollTo(0, 0); }}
                       className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted rounded-md transition-colors"
                     >
                       {item.label}
@@ -278,7 +278,7 @@ const Navigation = () => {
             <Collapsible open={studentLifeOpen} onOpenChange={setStudentLifeOpen}>
               <div className="px-4 py-2">
                 <CollapsibleTrigger className="flex items-center justify-between w-full font-semibold text-foreground">
-                  <Link to="/student-life" onClick={() => setIsOpen(false)}>Student Life</Link>
+                  <Link to="/student-life" onClick={() => { setIsOpen(false); window.scrollTo(0, 0); }}>Student Life</Link>
                   {studentLifeOpen ? <ChevronDown className="h-4 w-4" /> : <ChevronRight className="h-4 w-4" />}
                 </CollapsibleTrigger>
                 <CollapsibleContent className="mt-2 space-y-1">
@@ -286,7 +286,7 @@ const Navigation = () => {
                     <Link
                       key={item.to}
                       to={item.to}
-                      onClick={() => setIsOpen(false)}
+                      onClick={() => { setIsOpen(false); window.scrollTo(0, 0); }}
                       className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted rounded-md transition-colors"
                     >
                       {item.label}
@@ -299,7 +299,7 @@ const Navigation = () => {
             {/* News & Events */}
             <Link
               to="/news-events"
-              onClick={() => setIsOpen(false)}
+              onClick={() => { setIsOpen(false); window.scrollTo(0, 0); }}
               className="block px-4 py-2 text-foreground hover:bg-muted rounded-md transition-colors"
             >
               News & Events
@@ -308,7 +308,7 @@ const Navigation = () => {
             {/* Contact */}
             <Link
               to="/contact"
-              onClick={() => setIsOpen(false)}
+              onClick={() => { setIsOpen(false); window.scrollTo(0, 0); }}
               className="block px-4 py-2 text-foreground hover:bg-muted rounded-md transition-colors"
             >
               Contact

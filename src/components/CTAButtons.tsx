@@ -14,7 +14,7 @@ const CTAButtons = () => {
         asChild
         className="shadow-lg hover:scale-105 transition-transform"
       >
-        <Link to="/admissions/how-to-apply">Apply Now</Link>
+        <Link to="/admissions/how-to-apply" onClick={() => window.scrollTo(0, 0)}>Apply Now</Link>
       </Button>
       <Button 
         size="lg"
