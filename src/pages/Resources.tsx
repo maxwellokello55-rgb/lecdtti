@@ -268,13 +268,13 @@ const Resources = () => {
                 and additional resources.
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
-                <Button size="lg" onClick={() => window.location.href = '/contact'}>
+                <Button size="lg" onClick={() => { window.scrollTo(0, 0); window.location.href = '/contact'; }}>
                   Contact Us
                 </Button>
-                <Button size="lg" variant="outline" onClick={() => window.location.href = '/faqs'}>
+                <Button size="lg" variant="outline" onClick={() => { window.scrollTo(0, 0); window.location.href = '/faqs'; }}>
                   View FAQs
                 </Button>
-                <Button size="lg" variant="outline" onClick={() => window.location.href = '/about'}>
+                <Button size="lg" variant="outline" onClick={() => { window.scrollTo(0, 0); window.location.href = '/about'; }}>
                   Learn More
                 </Button>
               </div>

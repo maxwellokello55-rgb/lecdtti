@@ -293,13 +293,13 @@ const StudentLife = () => {
                   character to make a lasting impact in early childhood education.
                 </p>
                 <div className="flex flex-wrap gap-4 justify-center">
-                  <Button size="lg" onClick={() => window.location.href = '/admissions'}>
+                  <Button size="lg" onClick={() => { window.scrollTo(0, 0); window.location.href = '/admissions'; }}>
                     Apply Now
                   </Button>
-                  <Button size="lg" variant="outline" onClick={() => window.location.href = '/contact'}>
+                  <Button size="lg" variant="outline" onClick={() => { window.scrollTo(0, 0); window.location.href = '/contact'; }}>
                     Contact Us
                   </Button>
-                  <Button size="lg" variant="outline" onClick={() => window.location.href = '/about'}>
+                  <Button size="lg" variant="outline" onClick={() => { window.scrollTo(0, 0); window.location.href = '/about'; }}>
                     Learn More
                   </Button>
                 </div>

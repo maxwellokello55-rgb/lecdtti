@@ -245,11 +245,11 @@ const NewsEvents = () => {
             Don't miss important updates, event announcements, and insights on early childhood education. Follow us on social media or contact us directly.
           </p>
           <div className="flex flex-wrap gap-4 justify-center pt-4">
-            <Button variant="secondary" size="lg" asChild>
-              <a href="/contact">Contact Us</a>
+            <Button variant="secondary" size="lg" onClick={() => { window.scrollTo(0, 0); window.location.href = '/contact'; }}>
+              Contact Us
             </Button>
-            <Button variant="outline" size="lg" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary" asChild>
-              <a href="/admissions">Apply Now</a>
+            <Button variant="outline" size="lg" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary" onClick={() => { window.scrollTo(0, 0); window.location.href = '/admissions'; }}>
+              Apply Now
             </Button>
           </div>
         </div>
