@@ -23,10 +23,10 @@ const Footer = () => {
           <div>
             <h3 className="font-bold text-lg mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link to="/about/who-we-are" className="text-white/80 hover:text-white transition-colors">About Us</Link></li>
-              <li><Link to="/programs/diploma" className="text-white/80 hover:text-white transition-colors">Programs</Link></li>
-              <li><Link to="/admissions/how-to-apply" className="text-white/80 hover:text-white transition-colors">Admissions</Link></li>
-              <li><Link to="/student-life/institution-life" className="text-white/80 hover:text-white transition-colors">Student Life</Link></li>
+              <li><button onClick={() => window.location.href = '/about/who-we-are'} className="text-white/80 hover:text-white transition-colors">About Us</button></li>
+              <li><button onClick={() => window.location.href = '/programs/diploma'} className="text-white/80 hover:text-white transition-colors">Programs</button></li>
+              <li><button onClick={() => window.location.href = '/admissions/how-to-apply'} className="text-white/80 hover:text-white transition-colors">Admissions</button></li>
+              <li><button onClick={() => window.location.href = '/student-life/institution-life'} className="text-white/80 hover:text-white transition-colors">Student Life</button></li>
             </ul>
           </div>
 
@@ -34,10 +34,10 @@ const Footer = () => {
           <div>
             <h3 className="font-bold text-lg mb-4">More</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link to="/about/leadership" className="text-white/80 hover:text-white transition-colors">Leadership & Staff</Link></li>
-              <li><Link to="/student-life/gallery" className="text-white/80 hover:text-white transition-colors">Gallery</Link></li>
-              <li><Link to="/news-events" className="text-white/80 hover:text-white transition-colors">News & Events</Link></li>
-              <li><Link to="/contact" className="text-white/80 hover:text-white transition-colors">Contact Us</Link></li>
+              <li><button onClick={() => window.location.href = '/about/leadership'} className="text-white/80 hover:text-white transition-colors">Leadership & Staff</button></li>
+              <li><button onClick={() => window.location.href = '/student-life/gallery'} className="text-white/80 hover:text-white transition-colors">Gallery</button></li>
+              <li><button onClick={() => window.location.href = '/news-events'} className="text-white/80 hover:text-white transition-colors">News & Events</button></li>
+              <li><button onClick={() => window.location.href = '/contact'} className="text-white/80 hover:text-white transition-colors">Contact Us</button></li>
               <li>
                 <a 
                   href="https://www.youtube.com/@LECDTTI" 
